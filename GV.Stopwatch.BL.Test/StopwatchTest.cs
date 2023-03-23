@@ -9,6 +9,7 @@ namespace GV.Stopwatch.BL.Test
     [TestClass]
     public class StopwatchTest
     {
+        //hi
 
         [TestMethod]
         public void StartClockTest()
