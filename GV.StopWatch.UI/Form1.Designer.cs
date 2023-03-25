@@ -34,6 +34,8 @@
             this.btnStop = new System.Windows.Forms.Button();
             this.lblDisplay = new System.Windows.Forms.Label();
             this.btnReset = new System.Windows.Forms.Button();
+            this.lstSplitTimes = new System.Windows.Forms.ListBox();
+            this.btnSplit = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // timer1
@@ -42,7 +44,7 @@
             // 
             // btnStart
             // 
-            this.btnStart.Location = new System.Drawing.Point(81, 173);
+            this.btnStart.Location = new System.Drawing.Point(45, 152);
             this.btnStart.Name = "btnStart";
             this.btnStart.Size = new System.Drawing.Size(124, 64);
             this.btnStart.TabIndex = 0;
@@ -52,7 +54,7 @@
             // 
             // btnStop
             // 
-            this.btnStop.Location = new System.Drawing.Point(237, 173);
+            this.btnStop.Location = new System.Drawing.Point(201, 152);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(129, 64);
             this.btnStop.TabIndex = 0;
@@ -64,7 +66,7 @@
             // 
             this.lblDisplay.AutoSize = true;
             this.lblDisplay.Font = new System.Drawing.Font("Segoe UI", 28.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblDisplay.Location = new System.Drawing.Point(193, 45);
+            this.lblDisplay.Location = new System.Drawing.Point(157, 24);
             this.lblDisplay.Name = "lblDisplay";
             this.lblDisplay.Size = new System.Drawing.Size(0, 62);
             this.lblDisplay.TabIndex = 1;
@@ -72,7 +74,7 @@
             // 
             // btnReset
             // 
-            this.btnReset.Location = new System.Drawing.Point(405, 173);
+            this.btnReset.Location = new System.Drawing.Point(369, 152);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(124, 64);
             this.btnReset.TabIndex = 0;
@@ -80,11 +82,32 @@
             this.btnReset.UseVisualStyleBackColor = true;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
+            // lstSplitTimes
+            // 
+            this.lstSplitTimes.FormattingEnabled = true;
+            this.lstSplitTimes.ItemHeight = 20;
+            this.lstSplitTimes.Location = new System.Drawing.Point(121, 305);
+            this.lstSplitTimes.Name = "lstSplitTimes";
+            this.lstSplitTimes.Size = new System.Drawing.Size(296, 184);
+            this.lstSplitTimes.TabIndex = 2;
+            // 
+            // btnSplit
+            // 
+            this.btnSplit.Location = new System.Drawing.Point(213, 248);
+            this.btnSplit.Name = "btnSplit";
+            this.btnSplit.Size = new System.Drawing.Size(94, 29);
+            this.btnSplit.TabIndex = 3;
+            this.btnSplit.Text = "Split";
+            this.btnSplit.UseVisualStyleBackColor = true;
+            this.btnSplit.Click += new System.EventHandler(this.btnSplit_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 336);
+            this.ClientSize = new System.Drawing.Size(556, 501);
+            this.Controls.Add(this.btnSplit);
+            this.Controls.Add(this.lstSplitTimes);
             this.Controls.Add(this.lblDisplay);
             this.Controls.Add(this.btnStop);
             this.Controls.Add(this.btnReset);
@@ -103,5 +126,7 @@
         private Button btnStop;
         private Label lblDisplay;
         private Button btnReset;
+        private ListBox lstSplitTimes;
+        private Button btnSplit;
     }
 }

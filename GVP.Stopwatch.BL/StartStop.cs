@@ -77,10 +77,32 @@ namespace GVP.Stopwatch.BL
         }
 
 
+        public void RecordSplitTime(List<string> splitTimes)
+        {
+            // Check if the stopwatch is running and has already started
+            if (running && ElapsedTime != "00:00:00")
+            {
+                // Calculate the split time by subtracting the start time from the current time
+                TimeSpan splitTime = DateTime.Now - startTime;
+
+                // Add the split time to the list of split times
+                splitTimes.Add(splitTime.ToString(@"hh\:mm\:ss"));
+
+               
+            }
+            else
+            {
+                throw new Exception();
+            }
+        }
+
+
         public void Reset()
         {
             startTime = DateTime.MinValue;
             stopTime = DateTime.MinValue;
+            running = false;
+            cleared= true;
         }
 
     }
